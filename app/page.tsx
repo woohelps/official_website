@@ -1,24 +1,53 @@
 import ArrowRightIcon from "@/public/icons/ontactus_gengduo.svg";
 import ServiceCard from "./ServiceCard";
+import { HeroChat } from "./HeroChat";
+import CodePrinter from "./CodePrinter";
 
 export default function Home() {
   return (
     <main className="">
-      <section className="relative flex flex-col items-center overflow-hidden bg-[#EFEFEF] py-32 after:absolute after:-bottom-12 after:-left-16 after:h-96 after:w-96 after:rounded-full after:bg-[#D8F2BE] after:bg-opacity-40 after:blur-[180px] after:content-[''] before:absolute before:-top-32 before:-right-24 before:h-96 before:w-96 before:rounded-full before:bg-[#D8F2BE] before:bg-opacity-30 before:blur-[180px] before:content-[''] mb-[110px]">
-        <div className="w-[742px] flex flex-col items-center">
-          <h1 className="text-6xl font-semibold mb-[40px] text-center leading-[67px]">
-            Your Dream Our Mission Our Work{" "}
-            <span className="text-[#1F9D55]">AI-Enhanced</span>
+      <section className="relative mb-[110px] flex flex-col items-center pb-32 pt-[178px]">
+        <div className="absolute inset-0">
+          <video
+            src="/videos/hero_bg.mp4"
+            playsInline
+            muted
+            autoPlay
+            className="w-full"
+          />
+        </div>
+        <div className="w-[742px] flex flex-col items-center z-10 mb-[70px]">
+          <h1 className="text-[58px] font-semibold mb-[40px] leading-[67px] space-x-5">
+            <span className="animate-fade-right-150 animate-ease-in-out animate-duration-[800ms] inline-block animate-fill-forwards opacity-0">
+              Your Dream
+            </span>
+            <span className="animate-fade-left-150 animate-ease-in-out animate-duration-[800ms] inline-block animate-fill-forwards opacity-0">
+              Our Mission
+            </span>
+            <span className="animate-fade-right-150 animate-delay-300 animate-ease-in-out animate-duration-[800ms] inline-block animate-fill-forwards opacity-0">
+              Our Work
+            </span>
+            <span className="text-[#1F9D55] animate-delay-300 animate-fade-left-150 animate-ease-in-out animate-duration-[800ms] inline-block animate-fill-forwards opacity-0">
+              AI-Enhanced
+            </span>
           </h1>
           <div className="text-[#888A89] mb-[60px] text-center text-xl leading-[38px] whitespace-pre">
-            Transforming your ideas into reality—from concept to launch, {"\n"}
-            we leverage cutting-edge AI technology to ensure precision at every
-            step
+            <p className="animate-fade-up-100 animate-ease-in-out animate-duration-[800ms] animate-delay-300 animate-fill-forwards opacity-0">
+              Transforming your ideas into reality—from concept to launch,
+            </p>
+            <p className="animate-fade-up-100 animate-ease-in-out animate-duration-[800ms] animate-delay-[800ms] animate-fill-forwards opacity-0">
+              we leverage cutting-edge AI technology to ensure precision at
+              every step
+            </p>
           </div>
-          <button className="bg-[#1F9D55] py-[20px] px-[67px] rounded-[10px] text-white font-semibold flex items-center">
+          <button className="bg-[#1F9D55] py-[20px] px-[67px] rounded-[10px] text-white font-semibold flex items-center animate-fade-up-100 animate-ease-in-out animate-duration-[800ms] animate-delay-[1100ms] opacity-0 animate-fill-forwards hover:bg-[#373C39]">
             Contact Us
             <ArrowRightIcon className="ml-1.5" />
           </button>
+        </div>
+        <div className="flex z-10">
+          <HeroChat />
+          <CodePrinter />
         </div>
       </section>
       <section className="container mx-auto" id="our-service">

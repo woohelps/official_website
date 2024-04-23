@@ -4,6 +4,8 @@ import Header from "./Header";
 import localFont from "next/font/local";
 
 const MiSans = localFont({
+  variable: '--font-mi-sans',
+  preload: false,
   src: [
     {
       path: "../public/fonts/MiSansLatin-Regular.woff",

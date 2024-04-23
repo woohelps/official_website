@@ -5,3 +5,51 @@
 * {
   color: #373c39;
 }
+
+.animate-fade-left-150 {
+  animation-name: fade-left-150;
+}
+
+.animate-fade-right-150 {
+  animation-name: fade-right-150;
+}
+
+.animate-fade-up-100 {
+  animation-name: fade-up-100; 
+}
+
+@keyframes fade-left-150 {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-right-150 {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-up-100 {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

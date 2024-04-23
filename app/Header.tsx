@@ -27,7 +27,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={clsx(
-        "fixed top-0 w-full h-[70px] items-center flex z-10 animate-fade-down animate-duration-1000 animate-ease-in-out transition-[background-color,box-shadow] duration-300",
+        "fixed top-0 w-full h-[70px] items-center flex z-20 animate-fade-down animate-duration-1000 animate-ease-in-out transition-[background-color,box-shadow] duration-300",
         {
           "shadow-[0px_-5px_21px_rgba(40,47,43,0.32)]": scrollY >= maxScrollY,
         }
