@@ -1,38 +1,24 @@
-"use client";
-
 import React from "react";
 import animationData from "@/public/lottie/hero-chat/animation.json";
-import dynamic from "next/dynamic";
 import Image from "next/image";
+import LottieDelayPlay from "./LottieDelayPlay";
 
-const size = { width: 367 * 1.16, height: 256 * 1.16 };
+const size = { width: 367, height: 256 };
 
-const Lottie = dynamic(() => import("react-lottie"), {
-  loading: () => (
-    <div className="ml-[30px]">
-      <Image
-        width={367}
-        height={256}
-        src="/lottie/hero-chat/poster.png"
-        alt=""
-      />
-    </div>
-  ),
-  ssr: false,
-});
-
-export const HeroChat = () => {
+const HeroChat = () => {
   return (
-    <div style={size}>
-      <Lottie
-        {...size}
-        options={{
-          loop: true,
-          autoplay: true,
-          animationData: animationData,
-        }}
-        eventListeners={[]}
+    <div
+      style={size}
+      className="mr-[35px] animate-fade-up-100 animate-ease-in-out animate-duration-[800ms] animate-delay-[1400ms] animate-fill-forwards opacity-0"
+    >
+      <LottieDelayPlay
+        loop
+        animationData={animationData}
+        delayMs={1400}
+        loading={<Image {...size} src="/lottie/hero-chat/poster.png" alt="" />}
       />
     </div>
   );
 };
+
+export default HeroChat;
