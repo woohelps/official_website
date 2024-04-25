@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import OurService from "./OurService";
 import ProcessPart from "./ProcessPart";
 import AiEfficiencyPart from "./AiEfficiencyPart";
+import TechStackPart from "./TechStackPart";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <OurService />
         <ProcessPart />
         <AiEfficiencyPart />
+        <TechStackPart />
       </LazyMotion>
       <div className="h-80">
         footer
