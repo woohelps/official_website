@@ -1,8 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "./Header";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const MiSans = localFont({
+  variable: '--font-mi-sans',
+  preload: false,
+  src: [
+    {
+      path: "../public/fonts/MiSansLatin-Regular.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/MiSansLatin-Semibold.woff",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/MiSansLatin-Bold.woff",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +37,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={MiSans.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

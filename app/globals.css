@@ -2,32 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  color: #373c39;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.animate-fade-left-150 {
+  animation-name: fade-left-150;
+}
+
+.animate-fade-right-150 {
+  animation-name: fade-right-150;
+}
+
+.animate-fade-up-100 {
+  animation-name: fade-up-100; 
+}
+
+@keyframes fade-left-150 {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes fade-right-150 {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes fade-up-100 {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ref: https://codepen.io/abhikb/pen/yLgMvGw */
+.infinite-scroll-images-1 {
+  animation: infinite-scroll-images-1 30s linear infinite;
+}
+.infinite-scroll-images-2 {
+  animation: infinite-scroll-images-2 31s linear infinite;
+}
+
+@keyframes infinite-scroll-images-1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-230px * 8));
+  }
+}
+
+@keyframes infinite-scroll-images-2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-230px * 9));
   }
 }

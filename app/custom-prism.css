@@ -1,0 +1,7 @@
+.custom-prism code,
+.custom-prism pre {
+  background-color: transparent;
+  font-family: var(--font-mi-sans);
+  padding: 0;
+  overflow: hidden;
+}
