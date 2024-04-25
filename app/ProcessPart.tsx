@@ -63,7 +63,7 @@ const ProcessPart = () => {
   }, [lastAreaInView]);
 
   return (
-    <section className="container mx-auto" id="our-service">
+    <section className="container mx-auto mb-[133px]" id="our-service">
       <m.h3
         className="font-bold text-[34px] text-center mb-[60px]"
         {...fadeUpAnimation}

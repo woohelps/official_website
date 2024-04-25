@@ -11,6 +11,8 @@ const Header: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
+    setScrollY(window.scrollY);
+
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
