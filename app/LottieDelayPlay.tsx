@@ -54,7 +54,7 @@ const LottieDelayPlay: React.FC<LottieDelayPlayProps> = ({
       {isLoading && <div className="absolute inset-0">{loading}</div>}
       <Lottie
         {...lottieProps}
-        autoPlay={false}
+        autoplay={false}
         lottieRef={ref}
         onDOMLoaded={handleDomLoaded}
       />

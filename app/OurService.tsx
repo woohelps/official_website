@@ -38,7 +38,7 @@ const OurService = () => {
   }, [websiteDesignDemoIsInView]);
 
   return (
-    <section className="container mx-auto" id="our-service">
+    <section className="container mx-auto mb-[160px]" id="our-service">
       <m.h3
         className="font-bold text-[34px] text-center mb-[30px]"
         {...fadeUpAnimation}
