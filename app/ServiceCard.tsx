@@ -26,6 +26,7 @@ const fadeUpVariants = {
 const fadeUpAnimation = {
   initial: fadeUpVariants.offscreen,
   whileInView: fadeUpVariants.onscreen,
+  viewport: { once: true },
 } as const;
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -35,12 +36,15 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   className,
 }) => {
   return (
-    <m.div className={clsx("rounded-[10px] p-[40px]", className)} {...fadeUpAnimation}>
+    <m.div
+      className={clsx("rounded-[10px] p-[40px]", className)}
+      {...fadeUpAnimation}
+    >
       <div>
         <div className="text-2xl font-semibold mb-3">{title}</div>
         <p className="text-[#6F6F6F]">{description}</p>
       </div>
-      <div>{children}</div>
+      {children}
     </m.div>
   );
 };

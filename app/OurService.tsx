@@ -20,7 +20,7 @@ const fadeUpVariants = {
 const fadeUpAnimation = {
   initial: fadeUpVariants.offscreen,
   whileInView: fadeUpVariants.onscreen,
-  viewport: { amount: "all" },
+  viewport: { amount: "all", once: true },
 } as const;
 
 const OurService = () => {
@@ -70,7 +70,7 @@ const OurService = () => {
               playsInline
               ref={websiteDesignDemoVideoRef}
               src="/videos/website-design-demo.mp4"
-              className="rounded-lg mt-[34px]"
+              className="rounded-lg mt-[34px] shadow-[0px_16px_46px_rgba(28,63,57,0.30)]"
             />
           </ServiceCard>
           <ServiceCard
@@ -121,9 +121,8 @@ const OurService = () => {
                 height={82}
                 alt=""
               />
-              {/* TODO: 需要 UI 将图标导出 */}
               <Image
-                src="/images/home/facebook.png"
+                src="/images/home/ticktock.png"
                 width={82}
                 height={82}
                 alt=""
@@ -137,9 +136,44 @@ const OurService = () => {
               </h4>
             }
             description="boosting efficiency and shortening project timelines This  not only ensures delivery "
-            className="bg-[#E4F4D3]"
+            className="bg-[#E4F4D3] pb-0 flex flex-col justify-between"
           >
-            <div>content</div>
+            <div className="mt-[32px] flex overflow-hidden">
+              <m.div
+                {...fadeUpAnimation}
+                viewport={{ amount: "some", once: true }}
+                whileInView={{
+                  ...fadeUpVariants.onscreen,
+                  transition: { duration: 0.8, delay: 0.3 },
+                }}
+                className="w-full mr-6"
+              >
+                <Image
+                  src="/images/home/app-1.png"
+                  width={200}
+                  height={390}
+                  alt=""
+                  className="w-full shadow-[0px_27px_46px_rgba(61,68,36,0.15)]"
+                />
+              </m.div>
+              <m.div
+                {...fadeUpAnimation}
+                viewport={{ amount: "some", once: true }}
+                whileInView={{
+                  ...fadeUpVariants.onscreen,
+                  transition: { duration: 0.8, delay: 0.3 },
+                }}
+                className="w-full flex items-end"
+              >
+                <Image
+                  src="/images/home/app-2.png"
+                  width={200}
+                  height={371}
+                  alt=""
+                  className="w-full shadow-[0px_27px_46px_rgba(61,68,36,0.15)]"
+                />
+              </m.div>
+            </div>
           </ServiceCard>
         </div>
       </div>
